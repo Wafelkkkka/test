@@ -1,0 +1,19 @@
+import math
+
+
+def find_thierd_side(a, b, gr):
+    # переводим угол из градусов в радианы
+    gr_rad = math.radians(gr)
+    # теорема косинусов
+    cos = a**2 + b**2 - 2 * a * b * math.cos(gr_rad)
+    c = math.sqrt(cos)
+
+    return c
+
+
+a = float(input("Введите длину первой стороны:"))
+b = float(input("Введите длину второй стороны:"))
+gr = float(input("Введите угол между сторонами в градусах:"))
+
+third_side = find_thierd_side(a, b, gr)
+print(third_side)
